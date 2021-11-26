@@ -1,0 +1,98 @@
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+body {
+	background: none;
+}
+
+/* de plek waar alle magie zich bevindt */
+#stage {
+	width: 300px;
+	height: 600px;
+	left: calc(50% - 150px);
+	top: 20px;
+	background: #F190B6;
+	position: absolute;
+	cursor: pointer;
+	overflow: hidden;
+	font-family: 'londrina';
+	border-radius: 8px;
+}
+
+/* vorm van het sneeuwvlokje */
+.snowflake {
+	position: absolute;
+	top: -30px;
+	background: linear-gradient(white, white);
+	border-radius: 50%;
+	box-shadow: 0 0 5px 2px rgba(255,255,255,.4);
+}
+
+/* de grootte van het sneeuwvlokje */
+.snowSize1 {
+	width: 10px;
+	height: 10px;
+}
+
+.snowSize2 {
+	width: 5px;
+	height: 5px;
+}
+
+.snowSize3 {
+	width: 8px;
+	height: 8px;
+}
+
+.snowSize4 {
+	width: 3px;
+	height: 3px;
+}
+
+
+/* de plek om de sneeuwvlokjes te plaatsen */
+.snowContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/* laat sneeuwvlokje verdwijnen als het deze class krijgt */
+.disappear {
+	opacity: 0;
+	transition: opacity .8s ease-in;
+}
+
+/* vormgeving van de knop */
+#button {
+	position: absolute;
+	background-color: aliceblue;
+	padding: 20px;
+	text-align: center;
+	width: 200px;
+	left: 50px;
+	border-radius: 8px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	top: 500px;
+	transition: transform .2s ease;
+}
+
+/* maak de knop iets groter als je er over heen gaat */
+#button:hover {
+	transform: scale(1.1);
+	transition: transform .2s ease;
+}
